@@ -2,7 +2,7 @@
 % cloud
 % function calculates density in x direction and y direction independently
 
-function density(pt_cloud)
+function density(pt_cloud, x_range, y_range)
 
 figure, pcshow(pt_cloud) , title('Point cloud'), xlabel('X'), ylabel('Y') ,zlabel('Z');
 
@@ -19,8 +19,8 @@ xyz = pt_cloud.Location;
 x= xyz(:,1);
 y= xyz(:,2);
 
-x_range = [(x_limit(1,1) + x_limit(1,2))/2 + 0.10 ,  (x_limit(1,1) + x_limit(1,2))/2 - 0.10];
-y_range = [(y_limit(1,1) + y_limit(1,2))/2 + 0.10 ,  (y_limit(1,1) + y_limit(1,2))/2 - 0.10];
+%x_range = [(x_limit(1,1) + x_limit(1,2))/2 + 0.10 ,  (x_limit(1,1) + x_limit(1,2))/2 - 0.10];
+%y_range = [(y_limit(1,1) + y_limit(1,2))/2 + 0.10 ,  (y_limit(1,1) + y_limit(1,2))/2 - 0.10];
 
 disp('Range of x values chosen');
 disp(x_range);
